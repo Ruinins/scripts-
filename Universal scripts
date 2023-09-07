@@ -110,7 +110,7 @@ local A = Y.Button({
 local A = Y.Button({
 	Text = "RTX",
 	Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Ruinins/scripts-/main/Instant%20RTX"))()
+        loadstring(game:HttpGet("loadstring(game:HttpGet('https://raw.githubusercontent.com/Ruinins/scripts-/main/RTX%20script'))()"))()
 	end,
 	Menu = {
 		Information = function(self)
