@@ -110,7 +110,7 @@ local A = Y.Button({
 local A = Y.Button({
 	Text = "RTX",
 	Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Ruinins/scripts-/main/RTX"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Ruinins/scripts-/main/Instant%20RTX"))()
 	end,
 	Menu = {
 		Information = function(self)
@@ -124,7 +124,7 @@ local A = Y.Button({
 local A = Y.Button({
 	Text = "RTX GUI",
 	Callback = function()
-        loadstring(game:HttpGet('raw.githubusercontent.com/GhostPlayer352/Test4/main/RTX%20Gui%20Hub%20Obfuscator'))()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/RTX%20Gui%20Hub%20Obfuscator'))()
 	end,
 	Menu = {
 		Information = function(self)
