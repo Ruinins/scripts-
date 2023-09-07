@@ -40,7 +40,7 @@ local A = Y.Button({
 local A = Y.Button({
 	Text = "Perm Tp tool",
 	Callback = function()
-        loadstring(game:HttpGet("https://pastefy.app/IpjIW7ZH/raw"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Ruinins/scripts-/main/Perm%20tp%20tool"))()
 	end,
 	Menu = {
 		Information = function(self)
@@ -82,7 +82,7 @@ local A = Y.Button({
 local A = Y.Button({
 	Text = "Inf Jump GUI",
 	Callback = function()
-        loadstring(game:HttpGet("https://pastefy.app/34roug0c/raw"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Ruinins/scripts-/main/Infinite%20jump"))()
 	end,
 	Menu = {
 		Information = function(self)
@@ -96,7 +96,7 @@ local A = Y.Button({
 local A = Y.Button({
 	Text = "Teleport Tool",
 	Callback = function()
-        loadstring(game:HttpGet("https://pastefy.app/vM8WfEbF/raw"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Ruinins/scripts-/main/Tp%20Tool"))()
 	end,
 	Menu = {
 		Information = function(self)
@@ -110,7 +110,7 @@ local A = Y.Button({
 local A = Y.Button({
 	Text = "RTX",
 	Callback = function()
-        loadstring(game:HttpGet("https://pastefy.app/O5u9Mkuc/raw"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Ruinins/scripts-/main/RTX"))()
 	end,
 	Menu = {
 		Information = function(self)
@@ -124,7 +124,7 @@ local A = Y.Button({
 local A = Y.Button({
 	Text = "RTX GUI",
 	Callback = function()
-        loadstring(game:HttpGet('https://pastefy.app/RD7oOPOz/raw'))()
+        loadstring(game:HttpGet('loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/RTX%20Gui%20Hub%20Obfuscator'))()'))()
 	end,
 	Menu = {
 		Information = function(self)
@@ -138,7 +138,7 @@ local A = Y.Button({
 local A = Y.Button({
 	Text = "PShade",
 	Callback = function()
-        loadstring(game:HttpGet('https://pastefy.app/3R4akqUS/raw'))()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/Ruinins/scripts-/main/pshade'))()
 	end,
 	Menu = {
 		Information = function(self)
@@ -152,7 +152,7 @@ local A = Y.Button({
 local A = Y.Button({
 	Text = "Collision Toggler",
 	Callback = function()
-        loadstring(game:HttpGet("https://pastefy.app/L1dE7yRh/raw"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Ruinins/scripts-/main/Collision%20Toggler"))()
 	end,
 	Menu = {
 		Information = function(self)
@@ -166,7 +166,7 @@ local A = Y.Button({
 local A = Y.Button({
 	Text = "Fly",
 	Callback = function()
-        loadstring(game:HttpGet("https://pastefy.app/NXELSMZK/raw", true))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Ruinins/scripts-/main/Fly%20GUI%20v3", true))()
 	end,
 	Menu = {
 		Information = function(self)
@@ -180,7 +180,7 @@ local A = Y.Button({
 local A = Y.Button({
 	Text = "Name ESP",
 	Callback = function()
-        loadstring(game:HttpGet("https://pastefy.app/kA8tuBHS/raw", true))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Ruinins/scripts-/main/Altlexon's%20Name%20ESP", true))()
 	end,
 	Menu = {
 		Information = function(self)
