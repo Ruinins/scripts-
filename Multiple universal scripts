@@ -232,27 +232,32 @@ local B = Z.Slider({
 
 -- JumpPower Script
 local function changeJumpPower(value)
-    local Jump = tonumber(value)
+    local jpower = tonumber(value)
     local player = game.Players.LocalPlayer
     
-    if Jump and player then
-        local Char = player.Character or workspace:FindFirstChild(player.Name)
-        local Human = Char and Char:FindFirstChildWhichIsA("Humanoid")
+    if jpower and player then
+        local character = player.Character or workspace:FindFirstChild(player.Name)
+        local humanoid = character and character:FindFirstChildWhichIsA("Humanoid")
         
-        if Char and Human then
-            Human.JumpPower = Jump
+        if character and humanoid then
+            if humanoid:FindFirstChild("UseJumpPower") then
+                humanoid.UseJumpPower = true
+                humanoid.JumpPower = jpower
+            else
+                humanoid.JumpHeight = jpower
+            end
         end
     end
 end
 
 local B = Z.Slider({
-	Text = "Jump",
-	Callback = function(Value)
-	    changeJumpPower(Value)
-	end,
-	Min = 10,
-	Max = 100,
-	Def = 50
+    Text = "Jump",
+    Callback = function(Value)
+        changeJumpPower(Value)
+    end,
+    Min = 10,
+    Max = 100,
+    Def = 50
 })
 
 local C = W.Button({
