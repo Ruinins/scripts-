@@ -185,7 +185,7 @@ local A = Y.Button({
 	Menu = {
 		Information = function(self)
 			X.Banner({
-				Text = "Names will appear on every playerÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢s head."
+				Text = "Names will appear on every players head."
 			})
 		end
 	}
