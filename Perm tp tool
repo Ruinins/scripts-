@@ -14,7 +14,7 @@ local function createNotification(message)
     TextLabel.Size = UDim2.new(1, 0, 1, 0)
     TextLabel.BackgroundTransparency = 1
     TextLabel.Text = message
-    TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+    TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
     TextLabel.TextSize = 20
     TextLabel.Parent = Frame
 
