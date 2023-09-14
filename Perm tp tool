@@ -24,7 +24,7 @@ local function createNotification(message)
 end
 
 
-createNotification("A teleport tool will not be spawned in your inventory every second")
+createNotification("A teleport tool will now be spawned in your inventory every second")
 
 
 while true do
