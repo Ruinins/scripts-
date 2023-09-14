@@ -8,3 +8,31 @@ pos = CFrame.new(pos.X,pos.Y,pos.Z)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos
 end)
 tool.Parent = game.Players.LocalPlayer.Backpack
+
+local function createNotification(message)
+    local Notification = Instance.new("ScreenGui")
+    Notification.Name = "Notification"
+    Notification.Parent = game.Players.LocalPlayer.PlayerGui
+
+    local Frame = Instance.new("Frame")
+    Frame.Size = UDim2.new(0, 0, 0, 0)
+    Frame.Position = UDim2.new(0.5, -100, 0, 10)
+    Frame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+    Frame.BorderSizePixel = 0
+    Frame.Parent = Notification
+
+    local TextLabel = Instance.new("TextLabel")
+    TextLabel.Size = UDim2.new(1, 0, 1, 0)
+    TextLabel.BackgroundTransparency = 1
+    TextLabel.Text = message
+    TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+    TextLabel.TextSize = 20
+    TextLabel.Parent = Frame
+
+    wait(5) 
+
+    Notification:Destroy()
+end
+
+
+createNotification("A teleport tool has been spawned in your inventory.")
