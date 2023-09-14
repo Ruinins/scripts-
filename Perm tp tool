@@ -4,7 +4,7 @@ local function createNotification(message)
     Notification.Parent = game.Players.LocalPlayer.PlayerGui
 
     local Frame = Instance.new("Frame")
-    Frame.Size = UDim2.new(0, 200, 0, 50)
+    Frame.Size = UDim2.new(0, 0, 0, 0)
     Frame.Position = UDim2.new(0.5, -100, 0, 10)
     Frame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
     Frame.BorderSizePixel = 0
@@ -18,13 +18,14 @@ local function createNotification(message)
     TextLabel.TextSize = 20
     TextLabel.Parent = Frame
 
-    wait(5) -- Change the notification display time here
+    wait(5) 
 
     Notification:Destroy()
 end
 
--- Example usage:
-createNotification("A teleport tool will now be spawned in your inventory every second.")
+
+createNotification("A teleport tool will not be spawned in your inventory every second")
+
 
 while true do
     wait(1)
