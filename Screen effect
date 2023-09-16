@@ -1,0 +1,63 @@
+local key = Enum.KeyCode.K
+
+local main = Instance.new("ScreenGui")
+local Upper = Instance.new("Frame")
+local Bottom = Instance.new("Frame")
+
+main.Name = "main"
+main.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+main.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+main.ResetOnSpawn = false
+
+Upper.Parent = main
+Upper.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Upper.Position = UDim2.new(-1.113, 0, -0.094, 0)
+Upper.Size = UDim2.new(0, 4854, 0, 218)
+
+Bottom.Parent = main
+Bottom.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Bottom.Position = UDim2.new(-1.428, 0, 0.831, 0)
+Bottom.Size = UDim2.new(0, 8000, 0, 250)
+
+local isUIVisible = false
+
+local function toggleUIVisibility()
+    isUIVisible = not isUIVisible
+    main.Enabled = isUIVisible
+end
+
+local function onKeyPress(input, gameProcessedEvent)
+    if not gameProcessedEvent and input.KeyCode == key then
+        toggleUIVisibility()
+    end
+end
+
+game:GetService("UserInputService").InputBegan:Connect(onKeyPress)
+
+local function createNotification(message)
+    local Notification = Instance.new("ScreenGui")
+    Notification.Name = "Notification"
+    Notification.Parent = game.Players.LocalPlayer.PlayerGui
+
+    local Frame = Instance.new("Frame")
+    Frame.Size = UDim2.new(0, 0, 0, 0)
+    Frame.Position = UDim2.new(0.5, -100, 0, 10)
+    Frame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+    Frame.BorderSizePixel = 0
+    Frame.Parent = Notification
+
+    local TextLabel = Instance.new("TextLabel")
+    TextLabel.Size = UDim2.new(1, 0, 1, 0)
+    TextLabel.BackgroundTransparency = 1
+    TextLabel.Text = message
+    TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+    TextLabel.TextSize = 20
+    TextLabel.Parent = Frame
+
+    wait(5) 
+
+    Notification:Destroy()
+end
+
+
+createNotification("K to toggle")
