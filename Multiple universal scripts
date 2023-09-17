@@ -45,7 +45,7 @@ local A = Y.Button({
 	Menu = {
 		Information = function(self)
 			X.Banner({
-				Text = "2 black bars will appear in the upper and bottm of your screen"
+				Text = "2 black bars will appear in the upper and bottm of your screen, L to toggle."
 			})
 		end
 	}
@@ -59,7 +59,7 @@ local A = Y.Button({
 	Menu = {
 		Information = function(self)
 			X.Banner({
-				Text = "Blurs your camera when moves"
+				Text = "Blurs your camera when moves."
 			})
 		end
 	}
