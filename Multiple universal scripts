@@ -45,7 +45,7 @@ local A = Y.Button({
 	Menu = {
 		Information = function(self)
 			X.Banner({
-				Text = "2 black bars will appear in the upper and bottm of your screen, L to toggle."
+				Text = "2 black bars will appear in the upper and bottom of your screen, L to toggle."
 			})
 		end
 	}
