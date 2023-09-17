@@ -1,29 +1,66 @@
-local key = Enum.KeyCode.K
+local key = Enum.KeyCode.L
+local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Quad)
 
 local main = Instance.new("ScreenGui")
-local Upper = Instance.new("Frame")
+local Frame = Instance.new("Frame")
 local Bottom = Instance.new("Frame")
 
 main.Name = "main"
 main.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 main.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 main.ResetOnSpawn = false
+main.Enabled = false -- Initially set to invisible
 
-Upper.Parent = main
-Upper.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Upper.Position = UDim2.new(-1.113, 0, -0.094, 0)
-Upper.Size = UDim2.new(0, 4854, 0, 218)
+Frame.Parent = main
+Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Frame.Position = UDim2.new(0, 0, 0, -218) -- Initially set above the screen
+Frame.Size = UDim2.new(0, 4854, 0, 218)
 
 Bottom.Parent = main
 Bottom.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Bottom.Position = UDim2.new(-1.428, 0, 0.831, 0)
-Bottom.Size = UDim2.new(0, 8000, 0, 250)
+Bottom.Position = UDim2.new(0, 0, 1, 0) -- Initially set below the screen
+Bottom.Size = UDim2.new(0, 4854, 0, 250)
 
 local isUIVisible = false
 
 local function toggleUIVisibility()
     isUIVisible = not isUIVisible
-    main.Enabled = isUIVisible
+
+    local tweenGoalFrame = {}
+    local tweenGoalBottom = {}
+
+    if isUIVisible then
+        tweenGoalFrame.Position = UDim2.new(0, 0, -0.125, 0)
+        tweenGoalBottom.Position = UDim2.new(0, 0, 1, -150)
+    else
+        tweenGoalFrame.Position = UDim2.new(0, 0, 0, -218)
+        tweenGoalBottom.Position = UDim2.new(0, 0, 1, 0)
+    end
+
+    local tweenFrame = game:GetService("TweenService"):Create(Frame, tweenInfo, tweenGoalFrame)
+    local tweenBottom = game:GetService("TweenService"):Create(Bottom, tweenInfo, tweenGoalBottom)
+
+    tweenFrame:Play()
+    tweenBottom:Play()
+
+    if not isUIVisible then
+        tweenFrame.Completed:Connect(function()
+            main.Enabled = false
+        end)
+    else
+        main.Enabled = true
+    end
+
+    local localPlayer = game.Players.LocalPlayer
+    for _, gui in ipairs(localPlayer.PlayerGui:GetChildren()) do
+        if gui:IsA("ScreenGui") and gui ~= main then
+            if isUIVisible then
+                gui.Enabled = false
+            else
+                gui.Enabled = true
+            end
+        end
+    end
 end
 
 local function onKeyPress(input, gameProcessedEvent)
@@ -33,6 +70,7 @@ local function onKeyPress(input, gameProcessedEvent)
 end
 
 game:GetService("UserInputService").InputBegan:Connect(onKeyPress)
+
 
 local function createNotification(message)
     local Notification = Instance.new("ScreenGui")
@@ -50,7 +88,7 @@ local function createNotification(message)
     TextLabel.Size = UDim2.new(1, 0, 1, 0)
     TextLabel.BackgroundTransparency = 1
     TextLabel.Text = message
-    TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+    TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
     TextLabel.TextSize = 20
     TextLabel.Parent = Frame
 
@@ -60,4 +98,4 @@ local function createNotification(message)
 end
 
 
-createNotification("K to toggle")
+createNotification("Press L to toggle")
