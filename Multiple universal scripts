@@ -38,6 +38,34 @@ local A = Y.Button({
 })
 
 local A = Y.Button({
+	Text = "Cinematic bars",
+	Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/Ruinins/scripts-/main/Screen%20effect'))()
+	end,
+	Menu = {
+		Information = function(self)
+			X.Banner({
+				Text = "2 black bars will appear in the upper and bottm of your screen"
+			})
+		end
+	}
+})
+
+local A = Y.Button({
+	Text = "Motion blur",
+	Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/Ruinins/scripts-/main/motion%20blur'))()
+	end,
+	Menu = {
+		Information = function(self)
+			X.Banner({
+				Text = "Blurs your camera when moves"
+			})
+		end
+	}
+})
+
+local A = Y.Button({
 	Text = "Perm Tp tool",
 	Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Ruinins/scripts-/main/Perm%20tp%20tool"))()
