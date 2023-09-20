@@ -1,3 +1,5 @@
+game.StarterGui:SetCore("SendNotification", {Title="Teleport tool"; Text="A teleport tool will now spawn in your inventory every second"; Duration=5;})
+
 while true do
     wait(1)
 mouse = game.Players.LocalPlayer:GetMouse()
@@ -11,5 +13,3 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos
 end)
 tool.Parent = game.Players.LocalPlayer.Backpack
 end
-
-game.StarterGui:SetCore("SendNotification", {Title="Teleport tool"; Text="A teleport tool will now spawn in your inventory every second"; Duration=5;})
