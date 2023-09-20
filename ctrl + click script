@@ -6,3 +6,5 @@ if not game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.LeftControl) t
 if not Mouse.Target then return end
 Plr.Character:MoveTo(Mouse.Hit.p)
 end)
+
+game.StarterGui:SetCore("SendNotification", {Title="Teleport"; Text="Ctrl + click to teleport"; Duration=5;})
