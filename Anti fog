@@ -1,0 +1,30 @@
+-- Services
+local Lighting = game:GetService("Lighting")
+
+-- FogEnd
+Lighting.FogEnd = 100000
+
+Lighting:GetPropertyChangedSignal("FogEnd"):Connect(function()
+    Lighting.FogEnd = 100000
+end)
+
+-- Atmosphere
+for _,v in ipairs(Lighting:GetDescendants()) do
+    if v:IsA("Atmosphere") then
+        v.Density = 0
+
+        v:GetPropertyChangedSignal("Density"):Connect(function()
+            v.Density = 0
+        end)
+    end
+end
+
+Lighting.DescendantAdded:Connect(function(v)
+    if v:IsA("Atmosphere") then
+        v.Density = 0
+
+        v:GetPropertyChangedSignal("Density"):Connect(function()
+            v.Density = 0
+        end)
+    end
+end)
