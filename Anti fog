@@ -1,27 +1,51 @@
-local Lighting = game:GetService("Lighting")
+local function createGui()
+    local gui = Instance.new("ScreenGui")
+    gui.Name = "do"
+    gui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 
-Lighting.FogEnd = 100000
+    local button = Instance.new("TextButton")
+    button.Name = "do"
+    button.Text = "Anti fog"
+    button.TextColor3 = Color3.fromRGB(255, 255, 255)
+    button.Size = UDim2.new(0, 60, 0, 40)
+    button.Position = UDim2.new(0, 100, 0, 1)
+    button.Parent = gui
+    button.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+    button.Draggable = true
 
-Lighting:GetPropertyChangedSignal("FogEnd"):Connect(function()
-    Lighting.FogEnd = 100000
-end)
+    local function onButtonClick()
+        local Lighting = game:GetService("Lighting")
+        
+        Lighting.FogEnd = 100000
+        
+        Lighting:GetPropertyChangedSignal("FogEnd"):Connect(function()
+            Lighting.FogEnd = 100000
+        end)
 
-for _,v in ipairs(Lighting:GetDescendants()) do
-    if v:IsA("Atmosphere") then
-        v.Density = 0
+        for _,v in ipairs(Lighting:GetDescendants()) do
+            if v:IsA("Atmosphere") then
+                v.Density = 0
 
-        v:GetPropertyChangedSignal("Density"):Connect(function()
-            v.Density = 0
+                v:GetPropertyChangedSignal("Density"):Connect(function()
+                    v.Density = 0
+                end)
+            end
+        end
+
+        Lighting.DescendantAdded:Connect(function(v)
+            if v:IsA("Atmosphere") then
+                v.Density = 0
+
+                v:GetPropertyChangedSignal("Density"):Connect(function()
+                    v.Density = 0
+                end)
+            end
         end)
     end
+
+    button.MouseButton1Click:Connect(onButtonClick)
 end
 
-Lighting.DescendantAdded:Connect(function(v)
-    if v:IsA("Atmosphere") then
-        v.Density = 0
+createGui()
 
-        v:GetPropertyChangedSignal("Density"):Connect(function()
-            v.Density = 0
-        end)
-    end
-end)
+game.StarterGui:SetCore("SendNotification", {Title="GUI"; Text="Reset to destroy GUI"; Duration=5;})
