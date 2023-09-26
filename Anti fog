@@ -48,4 +48,4 @@ end
 
 createGui()
 
-game.StarterGui:SetCore("SendNotification", {Title="GUI"; Text="Reset to destroy GUI"; Duration=5;})
+game.StarterGui:SetCore("SendNotification", {Title="Anti fog"; Text="Reset to destroy button"; Duration=5;})
