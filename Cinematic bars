@@ -1,4 +1,4 @@
-   local key = Enum.KeyCode.L -- Change the keybind here if needed
+local key = Enum.KeyCode.L -- Change the keybind here if needed
 local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Quad)
 
 local main = Instance.new("ScreenGui")
