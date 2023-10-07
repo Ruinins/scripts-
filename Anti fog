@@ -47,5 +47,3 @@ local function createGui()
 end
 
 createGui()
-
-game.StarterGui:SetCore("SendNotification", {Title="Anti fog"; Text="Reset to destroy button"; Duration=5;})
