@@ -40,7 +40,7 @@ local A = Y.Button({
 local A = Y.Button({
 	Text = "Cinematic bars",
 	Callback = function()
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/Ruinins/scripts-/main/Screen%20effect'))()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/Ruinins/scripts-/main/Cinematic%20bars.lua'))()
 	end,
 	Menu = {
 		Information = function(self)
@@ -54,7 +54,7 @@ local A = Y.Button({
 local A = Y.Button({
 	Text = "Motion blur",
 	Callback = function()
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/Ruinins/scripts-/main/motion%20blur'))()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/Ruinins/scripts-/main/motion%20blur.lua'))()
 	end,
 	Menu = {
 		Information = function(self)
@@ -68,7 +68,7 @@ local A = Y.Button({
 local A = Y.Button({
 	Text = "Perm Tp tool",
 	Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Ruinins/scripts-/main/Perm%20tp%20tool"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Ruinins/scripts-/main/Perm%20tp%20tool.lua"))()
 	end,
 	Menu = {
 		Information = function(self)
@@ -110,7 +110,7 @@ local A = Y.Button({
 local A = Y.Button({
 	Text = "Inf Jump GUI",
 	Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Ruinins/scripts-/main/Infinite%20jump"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Ruinins/scripts-/main/Infinite%20jump.lua"))()
 	end,
 	Menu = {
 		Information = function(self)
@@ -124,7 +124,7 @@ local A = Y.Button({
 local A = Y.Button({
 	Text = "Teleport Tool",
 	Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Ruinins/scripts-/main/Tp%20Tool"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Ruinins/scripts-/main/Tp%20Tool.lua"))()
 	end,
 	Menu = {
 		Information = function(self)
@@ -138,7 +138,7 @@ local A = Y.Button({
 local A = Y.Button({
 	Text = "RTX",
 	Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Ruinins/scripts-/main/RTX%20script"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Ruinins/scripts-/main/RTX%20script.lua"))()
 	end,
 	Menu = {
 		Information = function(self)
@@ -166,7 +166,7 @@ local A = Y.Button({
 local A = Y.Button({
 	Text = "PShade",
 	Callback = function()
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/Ruinins/scripts-/main/pshade'))()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/Ruinins/scripts-/main/pshade.lua'))()
 	end,
 	Menu = {
 		Information = function(self)
@@ -180,7 +180,7 @@ local A = Y.Button({
 local A = Y.Button({
 	Text = "Collision Toggler",
 	Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Ruinins/scripts-/main/Collision%20Toggler"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Ruinins/scripts-/main/Collision%20Toggler.lua"))()
 	end,
 	Menu = {
 		Information = function(self)
@@ -194,7 +194,7 @@ local A = Y.Button({
 local A = Y.Button({
 	Text = "Fly",
 	Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Ruinins/scripts-/main/Fly%20GUI%20v3", true))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Ruinins/scripts-/main/Fly%20GUI%20v3.lua", true))()
 	end,
 	Menu = {
 		Information = function(self)
