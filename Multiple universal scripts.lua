@@ -26,7 +26,7 @@ local W = X.New({
 local A = Y.Button({
 	Text = "Inf Yield",
 	Callback = function()
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
 	end,
 	Menu = {
 		Information = function(self)
@@ -40,7 +40,7 @@ local A = Y.Button({
 local A = Y.Button({
 	Text = "Cinematic bars",
 	Callback = function()
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/Ruinins/scripts-/main/Cinematic%20bars.lua'))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Ruinins/scripts-/main/Cinematic%20bars.lua"))()
 	end,
 	Menu = {
 		Information = function(self)
@@ -54,7 +54,7 @@ local A = Y.Button({
 local A = Y.Button({
 	Text = "Motion blur",
 	Callback = function()
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/Ruinins/scripts-/main/motion%20blur.lua'))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Ruinins/scripts-/main/motion%20blur.lua"))()
 	end,
 	Menu = {
 		Information = function(self)
@@ -96,7 +96,7 @@ local A = Y.Button({
 local A = Y.Button({
 	Text = "Auto-Walk GUI",
 	Callback = function()
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/Auto%20Walk%20Obfuscator'))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/GhostPlayer352/Test4/main/Auto%20Walk%20Obfuscator"))()
 	end,
 	Menu = {
 		Information = function(self)
@@ -152,7 +152,7 @@ local A = Y.Button({
 local A = Y.Button({
 	Text = "RTX GUI",
 	Callback = function()
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/RTX%20Gui%20Hub%20Obfuscator'))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/GhostPlayer352/Test4/main/RTX%20Gui%20Hub%20Obfuscator"))()
 	end,
 	Menu = {
 		Information = function(self)
@@ -166,7 +166,7 @@ local A = Y.Button({
 local A = Y.Button({
 	Text = "PShade",
 	Callback = function()
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/Ruinins/scripts-/main/pshade.lua'))()
+        loadstring(game:HttpGet("https://pastefy.app/kIPgKVWH/raw"))()
 	end,
 	Menu = {
 		Information = function(self)
