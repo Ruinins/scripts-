@@ -4,7 +4,6 @@ local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Quad)
 local main = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local Bottom = Instance.new("Frame")
-local Camera = workspace.CurrentCamera
 
 main.Name = "main"
 main.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
@@ -35,21 +34,17 @@ local function toggleUIVisibility()
 
 	local tweenGoalFrame = {}
 	local tweenGoalBottom = {}
-	local tweenGoalFOV = {}
 
 	if isUIVisible then
 		tweenGoalFrame.Position = UDim2.new(0, 0, -0.075, 0)  
 		tweenGoalBottom.Position = UDim2.new(0, 0, 0.835, 0) 
-		tweenGoalFOV.FieldOfView = 40 --Change this to disable the FOV changer
 	else
 		tweenGoalFrame.Position = UDim2.new(0, 0, -0.215, 0)  
 		tweenGoalBottom.Position = UDim2.new(0, 0, 1.05, 0) 
-		tweenGoalFOV.FieldOfView = 70
 	end
 
 	local tweenFrame = game:GetService("TweenService"):Create(Frame, tweenInfo, tweenGoalFrame)
 	local tweenBottom = game:GetService("TweenService"):Create(Bottom, tweenInfo, tweenGoalBottom)
-	local tweenFOV = game:GetService("TweenService"):Create(Camera, tweenInfo, tweenGoalFOV)
 
 	tweenFrame:Play()
 	tweenBottom:Play()
