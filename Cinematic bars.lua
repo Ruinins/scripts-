@@ -48,7 +48,6 @@ local function toggleUIVisibility()
 
 	tweenFrame:Play()
 	tweenBottom:Play()
-	tweenFOV:Play()
 
 	if not isUIVisible then
 		tweenFrame.Completed:Connect(function()
