@@ -38,4 +38,4 @@ userInputService.InputBegan:Connect(function(input)
     end
 end)
 
-game.StarterGui:SetCore("SendNotification", {Title="UI hider"; Text="M to toggle"; Duration=6;})
+game.StarterGui:SetCore("SendNotification", {Title="UI hider"; Text="L to toggle"; Duration=6;})
