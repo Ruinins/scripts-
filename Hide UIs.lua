@@ -33,9 +33,9 @@ end
 local toggleFunction = toggleScreenGui()
 
 userInputService.InputBegan:Connect(function(input)
-    if input.KeyCode == Enum.KeyCode.L then
+    if input.KeyCode == Enum.KeyCode.M then
         toggleFunction()
     end
 end)
 
-game.StarterGui:SetCore("SendNotification", {Title="UI hider"; Text="L to toggle"; Duration=6;})
+game.StarterGui:SetCore("SendNotification", {Title="UI hider"; Text="M to toggle"; Duration=6;})
